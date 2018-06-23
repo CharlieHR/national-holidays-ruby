@@ -1,0 +1,3 @@
+[submodule "national-holidays-config"]
+	path = national-holidays-config
+	url = git@github.com:kaoru/national-holidays-config.git
