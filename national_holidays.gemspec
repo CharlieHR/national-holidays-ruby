@@ -8,4 +8,9 @@ Gem::Specification.new do |s|
   s.email       = 'alex@balhatchet.net'
   s.files       = ['lib/national_holidays.rb']
   s.license     = 'MIT'
+
+  s.add_runtime_dependency 'countries', '~>2.1'
+
+  s.add_development_dependency 'rake', '~> 12.3'
+  s.add_development_dependency 'minitest', '~> 5.11'
 end
