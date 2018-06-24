@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'minitest/autorun'
 require 'national_holidays'
 
@@ -12,6 +14,6 @@ class NationalHolidaysCountryTest < Minitest::Test
   end
 
   def test_regions
-    assert_equal [:united_kingdom01, :united_kingdom02, :united_kingdom03, :united_kingdom04], NationalHolidays::Country.new(:gb).regions.map(&:code)
+    assert_equal %i[united_kingdom01 united_kingdom02 united_kingdom03 united_kingdom04], NationalHolidays::Country.new(:gb).regions.map(&:code)
   end
 end

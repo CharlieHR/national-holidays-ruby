@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'minitest/autorun'
 require 'national_holidays'
 
@@ -16,7 +18,7 @@ class NationalHolidaysTest < Minitest::Test
     assert_equal 'Vietnam', NationalHolidays.regions.last.name
   end
 
-	def test_regions_to_public_holiday_count_for_year
+  def test_regions_to_public_holiday_count_for_year
     assert_equal 8, NationalHolidays.regions_to_public_holiday_count_for_year(2017).fetch(:united_kingdom01)
-	end
+  end
 end

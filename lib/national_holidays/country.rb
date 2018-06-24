@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'countries'
 
 class NationalHolidays
@@ -18,12 +20,10 @@ class NationalHolidays
     def regions
       dir = "#{NationalHolidays.config_directory}/#{code}"
 
-      if Dir.exist?(dir)
-        Dir.glob("#{dir}/*.yml").sort.map do |filename|
-          Region.new(File.basename(filename).sub(%r{\.yml}, ''))
-        end
-      else
-        raise NationalHolidays::UnknownCountryError, "Unknown country: #{code}"
+      raise NationalHolidays::UnknownCountryError, "Unknown country: #{code}" unless Dir.exist?(dir)
+
+      Dir.glob("#{dir}/*.yml").sort.map do |filename|
+        Region.new(File.basename(filename).sub(/\.yml/, ''))
       end
     end
   end

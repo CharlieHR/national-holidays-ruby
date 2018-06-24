@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'minitest/autorun'
 require 'national_holidays'
 
@@ -6,7 +8,7 @@ class NationalHolidaysHolidayTest < Minitest::Test
     NationalHolidays::Holiday.new(
       {
         'en' => "New Year's Day",
-        'es' => 'Año Nuevo',
+        'es' => 'Año Nuevo'
       },
       '2018-01-01',
       true

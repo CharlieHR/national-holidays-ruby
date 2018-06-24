@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'national_holidays/country'
 require 'national_holidays/region'
 

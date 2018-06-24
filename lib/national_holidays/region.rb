@@ -1,14 +1,16 @@
+# frozen_string_literal: true
+
 require 'national_holidays/holiday'
 
 require 'yaml'
 
 class NationalHolidays
   class Region
-    attr_reader :code, :name
+    attr_reader :code
 
     def self.all
       Dir.glob("#{NationalHolidays.config_directory}/*/*.yml").map do |region_filename|
-        new(File.basename(region_filename).sub(%r{\.yml}, ''))
+        new(File.basename(region_filename).sub(/\.yml/, ''))
       end.sort_by(&:code)
     end
 
@@ -46,7 +48,7 @@ class NationalHolidays
 
     private
 
-    def holidays(start_date=nil, end_date=nil)
+    def holidays(start_date = nil, end_date = nil)
       start_date = Date.parse(start_date.to_s).to_s if start_date
       end_date = Date.parse(end_date.to_s).to_s if end_date
 
@@ -62,19 +64,21 @@ class NationalHolidays
       end.compact
     end
 
-    CACHE = {}
+    @cache = {}
+    class << self
+      attr_reader :cache
+    end
+
     def config
-      return CACHE[code] if CACHE.key?(code)
+      return self.class.cache[code] if self.class.cache.key?(code)
 
       filename = Dir.glob("#{NationalHolidays.config_directory}/*/*.yml").sort.find do |f|
         File.basename(f) == "#{code}.yml"
       end
 
-      if filename
-        CACHE[code] = YAML.safe_load(File.read(filename))
-      else
-        raise NationalHolidays::UnknownRegionError, "Unknown region: #{code}"
-      end
+      raise NationalHolidays::UnknownRegionError, "Unknown region: #{code}" unless filename
+
+      self.class.cache[code] = YAML.safe_load(File.read(filename))
     end
   end
 end

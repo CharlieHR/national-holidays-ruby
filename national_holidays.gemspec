@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 Gem::Specification.new do |s|
   s.name        = 'national_holidays'
   s.version     = '0.0.1'
@@ -11,6 +13,7 @@ Gem::Specification.new do |s|
 
   s.add_runtime_dependency 'countries', '~>2.1'
 
-  s.add_development_dependency 'rake', '~> 12.3'
   s.add_development_dependency 'minitest', '~> 5.11'
+  s.add_development_dependency 'rake', '~> 12.3'
+  s.add_development_dependency 'rubocop', '~> 0.56'
 end
