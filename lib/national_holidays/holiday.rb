@@ -3,8 +3,8 @@ class NationalHolidays
     attr_reader :names, :date
 
     def initialize(names, date, public_holiday)
-      @names = names
-      @date = date
+      @names = names.map { |k,v| [k.to_sym, v] }.to_h
+      @date = Date.parse(date.to_s)
       @public_holiday = public_holiday
     end
 

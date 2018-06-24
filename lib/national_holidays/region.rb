@@ -7,9 +7,9 @@ class NationalHolidays
     attr_reader :code, :name
 
     def self.all
-      Dir.glob("#{NationalHolidays.config_directory}/*/*.yml").sort.map do |region_filename|
+      Dir.glob("#{NationalHolidays.config_directory}/*/*.yml").map do |region_filename|
         new(File.basename(region_filename).sub(%r{\.yml}, ''))
-      end
+      end.sort_by(&:code)
     end
 
     def initialize(code)
@@ -24,12 +24,20 @@ class NationalHolidays
       holidays
     end
 
-    def holidays_before(date)
+    def holidays_on_or_before(date)
       holidays(nil, date)
     end
 
-    def holidays_after(date)
+    def holidays_before(date)
+      holidays(nil, date.prev_day)
+    end
+
+    def holidays_on_or_after(date)
       holidays(date, nil)
+    end
+
+    def holidays_after(date)
+      holidays(date.next_day, nil)
     end
 
     def holidays_between(start_date, end_date)
