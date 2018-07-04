@@ -2,7 +2,7 @@
 
 ## Where does this data come from?
 
-The national holidays data used in this gem comes from the [national-holidays-config](https://github.com/kaoru/national-holidays-config) project.
+The national holidays data used in this gem comes from the [national-holidays-config](https://github.com/CharlieHR/national-holidays-config) project.
 
 ## Installation
 
@@ -44,7 +44,7 @@ The national holidays data used in this gem comes from the [national-holidays-co
 
 Country names come from https://github.com/hexorx/countries
 
-Region names come from https://github.com/kaoru/national-holidays-config
+Region names come from https://github.com/CharlieHR/national-holidays-config
 
 ## Region
 

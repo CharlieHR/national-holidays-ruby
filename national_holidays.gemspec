@@ -8,7 +8,7 @@ Gem::Specification.new do |s|
   s.description = 'Uses config from the national-holidays-config project to provide access to national holiday data across 74 countries'
   s.authors     = ['Alex Balhatchet']
   s.email       = 'alex@balhatchet.net'
-  s.homepage    = "https://github.com/kaoru/national-holidays-ruby"
+  s.homepage    = "https://github.com/CharlieHR/national-holidays-ruby"
   s.license     = 'MIT'
   s.files       = Dir.glob("{bin,lib,test}/**/*") + Dir.glob("national-holidays-config/conf/*/*.yml") + %w(LICENSE.txt README.md Rakefile)
 
