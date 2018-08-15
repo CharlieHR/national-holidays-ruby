@@ -1,5 +1,7 @@
 # frozen_string_literal: true
 
+require 'date'
+
 class NationalHolidays
   class Holiday
     attr_reader :names, :date
