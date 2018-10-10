@@ -22,6 +22,12 @@ And to actually pull in new config use:
 
     git submodule foreach git pull origin master
 
+Then to publish:
+
+    gem build national_holidays.gemspec
+    gem push national_holidays-{VERSION}.gem
+    rm national_holidays-{VERSION}.gem
+
 ## Usage
 
     require 'national_holidays'
