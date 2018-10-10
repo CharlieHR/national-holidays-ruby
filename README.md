@@ -8,6 +8,20 @@ The national holidays data used in this gem comes from the [national-holidays-co
 
     gem install national_holidays
 
+## Development
+
+This project uses git submodules, so the first time you clone the repository you will need to run:
+
+    git submodule init
+
+Then to keep the config up to date use:
+
+    git pull --recurse-submodules
+
+And to actually pull in new config use:
+
+    git submodule foreach git pull origin master
+
 ## Usage
 
     require 'national_holidays'
