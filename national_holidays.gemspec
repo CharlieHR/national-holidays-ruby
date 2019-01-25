@@ -2,10 +2,10 @@
 
 Gem::Specification.new do |s|
   s.name        = 'national_holidays'
-  s.version     = '1.4.3'
-  s.date        = '2019-01-24'
-  s.summary     = 'National Holidays for 80 countries'
-  s.description = 'Uses config from the national-holidays-config project to provide access to national holiday data across 80 countries'
+  s.version     = '1.5.0'
+  s.date        = '2019-01-25'
+  s.summary     = 'National Holidays for 81 countries'
+  s.description = 'Uses config from the national-holidays-config project to provide access to national holiday data across 81 countries'
   s.authors     = ['Alex Balhatchet']
   s.email       = 'alex@balhatchet.net'
   s.homepage    = "https://github.com/CharlieHR/national-holidays-ruby"
