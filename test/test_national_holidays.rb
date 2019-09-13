@@ -15,7 +15,7 @@ class NationalHolidaysTest < Minitest::Test
 
   def test_regions
     assert_equal :angola01, NationalHolidays.regions.first.code
-    assert_equal 'Vietnam', NationalHolidays.regions.last.name
+    assert_equal 'Zurich', NationalHolidays.regions.last.name
   end
 
   def test_regions_to_public_holiday_count_for_year
