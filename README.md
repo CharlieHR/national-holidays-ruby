@@ -8,7 +8,7 @@ The national holidays data used in this gem comes from the [national-holidays-co
 
     gem install national_holidays
 
-## Development
+## Development
 
 This project uses git submodules, so the first time you clone the repository you will need to run:
 
