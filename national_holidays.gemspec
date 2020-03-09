@@ -2,8 +2,8 @@
 
 Gem::Specification.new do |s|
   s.name        = 'national_holidays'
-  s.version     = '1.8.12'
-  s.date        = '2020-03-06'
+  s.version     = '1.8.13'
+  s.date        = '2020-03-09'
   s.summary     = 'National Holidays for 84 countries'
   s.description = 'Uses config from the national-holidays-config project to provide access to national holiday data across 84 countries'
   s.authors     = ['Alex Balhatchet']
