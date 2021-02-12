@@ -20,7 +20,7 @@ Then to keep the config up to date use:
 
 And to actually pull in new config use:
 
-    git submodule foreach git pull origin master
+    git submodule foreach git pull origin main
 
 Then to publish:
 
