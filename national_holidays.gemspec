@@ -2,8 +2,8 @@
 
 Gem::Specification.new do |s|
   s.name        = 'national_holidays'
-  s.version     = '1.17.10'
-  s.date        = '2022-09-12'
+  s.version     = '1.17.11'
+  s.date        = '2022-09-14'
   s.summary     = 'National Holidays for 95 countries'
   s.description = 'Uses config from the national-holidays-config project to provide access to national holiday data across 95 countries'
   s.authors     = ['Alex Balhatchet']
