@@ -12,7 +12,7 @@ Gem::Specification.new do |s|
   s.license     = 'MIT'
   s.files       = Dir.glob("{bin,lib,test}/**/*") + Dir.glob("national-holidays-config/conf/*/*.yml") + %w(LICENSE.txt README.md Rakefile)
 
-  s.add_runtime_dependency 'countries', '~>2.1'
+  s.add_runtime_dependency 'countries', '~>5.7'
 
   s.add_development_dependency 'minitest', '~> 5.11'
   s.add_development_dependency 'rake', '~> 12.3'
