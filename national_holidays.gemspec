@@ -2,8 +2,8 @@
 
 Gem::Specification.new do |s|
   s.name        = 'national_holidays'
-  s.version     = '1.17.22'
-  s.date        = '2024-01-09'
+  s.version     = '2.0'
+  s.date        = '2024-01-16'
   s.summary     = 'National Holidays for 95 countries'
   s.description = 'Uses config from the national-holidays-config project to provide access to national holiday data across 95 countries'
   s.authors     = ['Alex Balhatchet']
@@ -12,7 +12,7 @@ Gem::Specification.new do |s|
   s.license     = 'MIT'
   s.files       = Dir.glob("{bin,lib,test}/**/*") + Dir.glob("national-holidays-config/conf/*/*.yml") + %w(LICENSE.txt README.md Rakefile)
 
-  s.add_runtime_dependency 'countries', '~>2.1'
+  s.add_runtime_dependency 'countries', '~>5.7'
 
   s.add_development_dependency 'minitest', '~> 5.11'
   s.add_development_dependency 'rake', '~> 12.3'
