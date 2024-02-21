@@ -12,6 +12,8 @@ Gem::Specification.new do |s|
   s.license     = 'MIT'
   s.files       = Dir.glob("{bin,lib,test}/**/*") + Dir.glob("national-holidays-config/conf/*/*.yml") + %w(LICENSE.txt README.md Rakefile)
 
+  s.required_ruby_version = '>= 3.0'
+
   s.add_runtime_dependency 'countries', '~>6.0'
 
   s.add_development_dependency 'minitest', '~> 5.11'
