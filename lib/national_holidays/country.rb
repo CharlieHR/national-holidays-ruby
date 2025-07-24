@@ -14,7 +14,7 @@ class NationalHolidays
 
     def initialize(code)
       @code = code.to_sym
-      @name = ISO3166::Country.new(code).iso_short_name
+      @name = ISO3166::Country.new(code).common_name
     end
 
     def regions

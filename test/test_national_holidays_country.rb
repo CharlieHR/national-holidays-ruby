@@ -10,7 +10,7 @@ class NationalHolidaysCountryTest < Minitest::Test
   end
 
   def test_name
-    assert_equal 'United Kingdom of Great Britain and Northern Ireland', NationalHolidays::Country.new(:gb).name
+    assert_equal 'United Kingdom', NationalHolidays::Country.new(:gb).name
   end
 
   def test_regions
