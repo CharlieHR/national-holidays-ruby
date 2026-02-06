@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    national_holidays (5.0.1)
+    national_holidays (5.0.2)
       countries (~> 8.0)
 
 GEM
